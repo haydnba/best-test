@@ -5,9 +5,7 @@ const SENTRY_DSN: string = String(
 );
 
 Sentry.init({
-  dsn:
-    SENTRY_DSN ||
-    "https://0b9c8536e5b04299a248f4f815d61ceb@o1134271.ingest.sentry.io/6181549",
+  dsn: SENTRY_DSN || "",
   // We recommend adjusting this value in production, or using tracesSampler
   // for finer control
   tracesSampleRate: 1.0,
