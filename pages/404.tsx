@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
+import Error from "next/error";
 
 const Custom404: NextPage = () => {
   const router = useRouter();
-  // console.log(new URL(window.location.href));
   console.log(router);
+  // Dispatch error, message, status etc. on Sentry, Mixpanel...
 
-  return <h1>404 - Page Not Found</h1>;
+  return <Error statusCode={404} />;
 };
 
 export default Custom404;
